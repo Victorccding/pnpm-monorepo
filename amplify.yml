@@ -4,11 +4,10 @@ applications:
       phases:
         preBuild:
           commands:
-            - npm -g pnpm
-            - pnpm install
+            - npx pnpm install
         build:
           commands:
-            - pnpm --filter next-app build
+            - npx pnpm --filter next-app build
       artifacts:
         baseDirectory: apps/next-app/.next
         files:
