@@ -8,13 +8,13 @@ applications:
             - pnpm install --no-frozen-lockfile
         build:
           commands:
-            - pnpm --filter next-app build
+            - npx pnpm --filter nextjs-app build
       artifacts:
-        baseDirectory: apps/next-app/.next
+        baseDirectory: apps/nextjs-app/.next
         files:
           - '**/*'
       cache:
         paths:
           - node_modules/**/*
       buildPath: /
-    appRoot: apps/next-app
+    appRoot: apps/nextjs-app
